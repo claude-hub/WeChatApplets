@@ -10,6 +10,7 @@
   },
   "scripts": {
     "start": "npm run dev:weapp",
+    "lint": "eslint --fix --ext .ts --ext .tsx src/",
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",
@@ -76,7 +77,8 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint"
     }
   }
 }

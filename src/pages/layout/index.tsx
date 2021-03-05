@@ -4,7 +4,6 @@ import { AtTabBar } from 'taro-ui'
 import './index.scss'
 
 export default function(props) {
-  console.log('-----', props)
   const [current, setCurrent] = useState(0);
 
   const handleClick = (index) => {

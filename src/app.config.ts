@@ -1,7 +1,8 @@
 export default {
   pages: [
     'pages/home/index',
-    'pages/home/css/power/index',
+    'pages/css/index',
+    'pages/css/power/index',
     'pages/questions/index',
     'pages/community/index',
     'pages/user/index',

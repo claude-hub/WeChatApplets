@@ -11,7 +11,7 @@ type IndexProps = {}
 function goToPage() {
   // 跳转到目的页面，在当前页面打开
   Taro.navigateTo({
-    url: 'css/power/index'
+    url: '/pages/css/index'
   })
 }
 

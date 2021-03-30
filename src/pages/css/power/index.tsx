@@ -5,7 +5,7 @@ import './index.scss'
 
 type IndexProps = {}
 
-function helloWorld() {
+function htmlContent() {
   const html = `
     <div class="g-container">
       <div class="g-number">98.7%</div>
@@ -38,7 +38,7 @@ function helloWorld() {
 const Index: React.FC<IndexProps> = function () {
   return (
     <View className='css-container'>
-      {helloWorld()}
+      {htmlContent()}
     </View>
   )
 }

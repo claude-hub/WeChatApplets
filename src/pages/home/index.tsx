@@ -1,14 +1,14 @@
 import React from 'react'
 import Taro from '@tarojs/taro';
 import { View, Text } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
+import { AtTag } from 'taro-ui'
 
 import './index.scss'
 
 
 type IndexProps = {}
 
-function goToPage() {
+function goToCSSPage() {
   // 跳转到目的页面，在当前页面打开
   Taro.navigateTo({
     url: '/pages/css/index'
@@ -17,9 +17,10 @@ function goToPage() {
 
 const Index: React.FC<IndexProps> = function() {
   return (
-    <View>
-      <Text>首页</Text>
-      <AtButton onClick={goToPage}>CSS</AtButton>
+    <View className='at-article'>
+      <View className='at-article__content'>
+        <AtTag onClick={goToCSSPage}>CSS</AtTag>
+      </View>
     </View>
   )
 }

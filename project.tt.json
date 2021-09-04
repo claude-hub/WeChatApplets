@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "WeChatApplets",
+  "appid": "wx1b0c43cb1085efc9",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}

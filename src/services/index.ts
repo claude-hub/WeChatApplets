@@ -1,6 +1,6 @@
-import { request, atMessage } from "@tarojs/taro";
+import { request, atMessage } from '@tarojs/taro';
 
-const API_PREFIX = "https://c9cabce5-5280-4779-8a78-c680576f0d88.bspapp.com";
+const API_PREFIX = 'https://c9cabce5-5280-4779-8a78-c680576f0d88.bspapp.com';
 
 const baseRequest = async params => {
   try {
@@ -8,20 +8,20 @@ const baseRequest = async params => {
     if (data?.success === false) {
       atMessage({
         message: data.error?.message,
-        type: "error"
+        type: 'error'
       });
     }
     return data;
   } catch (err) {
     atMessage({
       message: err,
-      type: "error"
+      type: 'error'
     });
   }
 };
 
 const getAllCategories = async () => {
-  const url = API_PREFIX + "/http/getAllCategories";
+  const url = API_PREFIX + '/http/getAllCategories';
   return await baseRequest({ url });
 };
 

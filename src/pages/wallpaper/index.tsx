@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { View, Text } from "@tarojs/components";
-import { getAllCategories } from "../../services";
+import React, { useState, useEffect } from 'react';
+import { View, Text } from '@tarojs/components';
+import { getAllCategories } from '../../services';
 
-import "./index.scss";
+import './index.scss';
 
 type WallpaperProps = {};
 
@@ -12,7 +12,7 @@ const Wallpaper: React.FC<WallpaperProps> = function() {
   useEffect(() => {
     const func = async () => {
       const { data } = await getAllCategories();
-      console.log("==", data);
+      console.log('==', data);
       setList(Object.values(data));
     };
     func();

@@ -1,6 +1,5 @@
-import React from "react";
-import { AtMessage } from "taro-ui";
-import { View } from "@tarojs/components";
+import { AtMessage } from 'taro-ui';
+import { View } from '@tarojs/components';
 
 const mainLayout = props => {
   return (

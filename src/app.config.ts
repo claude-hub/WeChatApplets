@@ -4,20 +4,20 @@ export default {
     // "pages/css/index",
     // "pages/css/power/index",
     // "pages/questions/index",
-    "pages/wallpaper/index",
-    "pages/user/index"
+    'pages/wallpaper/index',
+    'pages/user/index'
   ],
   window: {
-    backgroundTextStyle: "light",
-    navigationBarBackgroundColor: "#fff",
-    navigationBarTitleText: "前端进阶手册",
-    navigationBarTextStyle: "black"
+    backgroundTextStyle: 'light',
+    navigationBarBackgroundColor: '#fff',
+    navigationBarTitleText: '前端进阶手册',
+    navigationBarTextStyle: 'black'
   },
   tabBar: {
-    color: "#8a8a8a",
-    selectedColor: "#648bff",
-    backgroundColor: "#fff",
-    borderStyle: "black",
+    color: '#8a8a8a',
+    selectedColor: '#648bff',
+    backgroundColor: '#fff',
+    borderStyle: 'black',
     list: [
       // {
       //   pagePath: "pages/home/index",
@@ -32,16 +32,16 @@ export default {
       //   text: "社区"
       // },
       {
-        pagePath: "pages/wallpaper/index",
-        iconPath: "./assets/images/camera.png",
-        selectedIconPath: "./assets/images/camera_select.png",
-        text: "壁纸"
+        pagePath: 'pages/wallpaper/index',
+        iconPath: './assets/images/camera.png',
+        selectedIconPath: './assets/images/camera_select.png',
+        text: '壁纸'
       },
       {
-        pagePath: "pages/user/index",
-        iconPath: "./assets/images/user.png",
-        selectedIconPath: "./assets/images/user_select.png",
-        text: "我的"
+        pagePath: 'pages/user/index',
+        iconPath: './assets/images/user.png',
+        selectedIconPath: './assets/images/user_select.png',
+        text: '我的'
       }
     ]
   }

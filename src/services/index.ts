@@ -1,4 +1,5 @@
 import { request, atMessage } from '@tarojs/taro';
+import qs from 'qs';
 
 const API_PREFIX = 'https://c9cabce5-5280-4779-8a78-c680576f0d88.bspapp.com';
 
@@ -25,4 +26,9 @@ const getAllCategories = async () => {
   return await baseRequest({ url });
 };
 
-export { getAllCategories };
+const getAppsByCategory = async params => {
+  const url = API_PREFIX + '/http/getAppsByCategory?' + qs.stringify(params);
+  return await baseRequest({ url });
+};
+
+export { getAllCategories, getAppsByCategory };

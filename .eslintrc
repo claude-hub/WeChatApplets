@@ -3,6 +3,8 @@
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "quotes": [2, "single"] 
+    "quotes": [2, "single"],
+    "react/forbid-elements": "off",
+    "jsx-quotes": "off"
   }
 }

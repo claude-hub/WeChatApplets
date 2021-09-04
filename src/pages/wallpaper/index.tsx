@@ -1,41 +1,58 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from '@tarojs/components';
+import Taro from '@tarojs/taro';
+import { View, Text, Image, ScrollView } from '@tarojs/components';
 import { getAllCategories } from '../../services';
+import { IMAGE_MAP } from '../../utils/constants';
+import { Category } from '../../types';
 
 import './index.scss';
 
 type WallpaperProps = {};
 
 const Wallpaper: React.FC<WallpaperProps> = function() {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState<Category[]>([]);
 
   useEffect(() => {
     const func = async () => {
       const { data } = await getAllCategories();
-      console.log('==', data);
       setList(Object.values(data));
     };
     func();
   }, []);
 
+  const handleClick = (item: Category) => {
+    // 跳转到目的页面，在当前页面打开
+    Taro.navigateTo({
+      url: `/pages/wallpaper/detail/index?id=${item.id}&name=${item.name}`
+    });
+  };
+
   return (
     <View>
-      <Text>
-        {list?.map(item => item.name)}
-      </Text>
+      <Text className="title">热门分类</Text>
+      <ScrollView>
+        <View className="at-row wrap">
+          {list.map(item => {
+            return (
+              <View
+                key={item.id}
+                className="at-col at-col-6 img-item"
+                onClick={() => handleClick(item)}
+              >
+                <Image
+                  className="img"
+                  mode="widthFix"
+                  src={IMAGE_MAP[item.id]}
+                  lazyLoad
+                />
+                <Text className="text">{item.name}</Text>
+              </View>
+            );
+          })}
+        </View>
+      </ScrollView>
     </View>
   );
 };
 
 export default Wallpaper;
-
-// alias: ""
-// create_time: "2011-10-29 17:49:12"
-// id: "5"
-// mobile_hidden: "0"
-// name: "游戏壁纸"
-// order_createtime_hidden: "0"
-// order_num: "74"
-// pid: "0"
-// pjt: "zhuomianskin"
-// tag: ""

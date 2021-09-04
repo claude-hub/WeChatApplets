@@ -5,6 +5,7 @@ export default {
     // "pages/css/power/index",
     // "pages/questions/index",
     'pages/wallpaper/index',
+    'pages/wallpaper/detail/index',
     'pages/user/index'
   ],
   window: {

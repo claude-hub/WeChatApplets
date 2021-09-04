@@ -1,5 +1,6 @@
-import './app.scss'
+import mainLayout from "./components/Layout";
+import "./app.scss";
 
-export default function(props) {
-    return props.children
-}
+export default props => {
+  return mainLayout(props);
+};

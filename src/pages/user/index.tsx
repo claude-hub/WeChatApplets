@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Taro from '@tarojs/taro';
 import { AtAvatar, AtIcon, AtModal } from 'taro-ui';
 import { View, Text, Image } from '@tarojs/components';
 import defaultAvatar from '../../assets/images/default-avatar.png';
 import me from '../../assets/about/me.jpeg';
 import pay from '../../assets/about/pay.jpeg';
-import publish from '../../assets/about/publish.jpg'
+import publish from '../../assets/about/publish.jpg';
 
 import './index.scss';
 
@@ -45,43 +45,47 @@ const Index: React.FC<IndexProps> = () => {
   const handleClose = () => {
     setOpen(false);
     setUrl('');
-  }
-
-  const BUTTONS = [
-    {
-      icon: 'info',
-      color: '#5c80df',
-      text: '关于作者',
-      onClick: () => {
-        setUrl(me);
-        setOpen(true);
+  };
+  const btns = useMemo(() => {
+    const BUTTONS = [
+      {
+        icon: 'info',
+        color: '#5c80df',
+        text: '关于作者',
+        onClick: () => {
+          setUrl(me);
+          setOpen(true);
+        },
       },
-    },
-    {
-      icon: 'gzh',
-      text: '公众号',
-      color: '#8496c3',
-      onClick: () => {
-        setUrl(publish);
-        setOpen(true);
+      {
+        icon: 'gzh',
+        text: '公众号',
+        color: '#8496c3',
+        onClick: () => {
+          setUrl(publish);
+          setOpen(true);
+        },
       },
-    },
-    {
-      icon: 'dashang',
-      color: '#e54837',
-      text: '打赏作者',
-      onClick: () => {
-        setUrl(pay);
-        setOpen(true);
+      {
+        icon: 'dashang',
+        color: '#e54837',
+        text: '打赏作者',
+        onClick: () => {
+          setUrl(pay);
+          setOpen(true);
+        },
       },
-    },
-    {
-      icon: 'logout',
-      color: '#bf8038',
-      text: '退出登录',
-      onClick: handleLogout,
-    },
-  ];
+    ];
+    if (userInfo) {
+      BUTTONS.push({
+        icon: 'logout',
+        color: '#bf8038',
+        text: '退出登录',
+        onClick: handleLogout,
+      });
+    }
+    return BUTTONS;
+  }, [userInfo]);
 
   return (
     <View>
@@ -96,7 +100,7 @@ const Index: React.FC<IndexProps> = () => {
       </View>
       <View className="user-list">
         <View className="box-ul">
-          {BUTTONS.map((item) => {
+          {btns.map((item) => {
             const { icon, onClick, ...reset } = item;
             return (
               <View key={item.icon} className="btn" onClick={onClick}>

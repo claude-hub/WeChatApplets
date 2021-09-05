@@ -2,10 +2,7 @@
 
 扫码体验：
 
-<p>
-  <img src="https://cdn.jsdelivr.net/gh/claude-hub/WeChatApplets@main/images/%E5%B0%8F%E7%A8%8B%E5%BA%8F.jpeg" alt="小程序二维码" width="150" height="150" align="left" />
-  <br>
-</p>
+<img src="https://cdn.jsdelivr.net/gh/claude-hub/WeChatApplets@main/images/%E5%B0%8F%E7%A8%8B%E5%BA%8F.jpeg" alt="小程序二维码" width="150" height="150" align="left" />
 
 
 ## 1. commitizen：git cz替代git commit

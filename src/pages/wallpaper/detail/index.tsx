@@ -36,14 +36,13 @@ const Detail: React.FC<DetailProps> = function () {
   useEffect(() => {
     const { router } = getCurrentInstance();
     const { id, name } = router?.params || {};
-    if(name) {
+    if (name) {
       Taro.setNavigationBarTitle({
-        title: name
-      })
+        title: name,
+      });
     }
     if (id) {
       getDetail(id).then((res) => {
-        console.log(res);
         const { data } = res;
         setDetail(data);
         // setTotal(Number(totalCount));
@@ -70,7 +69,13 @@ const Detail: React.FC<DetailProps> = function () {
       {/* <Text>{total}</Text> */}
       {details.map((item) => {
         return (
-          <Image mode="widthFix" className="img" key={item.id} src={item.url} />
+          <Image
+            mode="widthFix"
+            className="img"
+            key={item.id}
+            src={item.img_1600_900}
+            showMenuByLongpress
+          />
         );
       })}
     </ScrollView>

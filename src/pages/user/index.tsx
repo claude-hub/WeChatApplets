@@ -3,9 +3,7 @@ import Taro from '@tarojs/taro';
 import { AtAvatar, AtIcon, AtModal } from 'taro-ui';
 import { View, Text, Image } from '@tarojs/components';
 import defaultAvatar from '../../assets/images/default-avatar.png';
-import me from '../../assets/about/me.jpeg';
-import pay from '../../assets/about/pay.jpeg';
-import publish from '../../assets/about/publish.jpg';
+import { ABOUT_IMG } from '../../utils/constants';
 
 import './index.scss';
 
@@ -53,7 +51,7 @@ const Index: React.FC<IndexProps> = () => {
         color: '#5c80df',
         text: '关于作者',
         onClick: () => {
-          setUrl(me);
+          setUrl(ABOUT_IMG['作者微信']);
           setOpen(true);
         },
       },
@@ -62,7 +60,7 @@ const Index: React.FC<IndexProps> = () => {
         text: '公众号',
         color: '#8496c3',
         onClick: () => {
-          setUrl(publish);
+          setUrl(ABOUT_IMG['公众号']);
           setOpen(true);
         },
       },
@@ -71,7 +69,7 @@ const Index: React.FC<IndexProps> = () => {
         color: '#e54837',
         text: '打赏作者',
         onClick: () => {
-          setUrl(pay);
+          setUrl(ABOUT_IMG['收款码']);
           setOpen(true);
         },
       },

@@ -1,6 +1,8 @@
-# WeChatApplets
+# 前端进阶手册
 
-前端进阶手册源码小程序源码
+扫码体验：
+
+![小程序二维码](https://cdn.jsdelivr.net/gh/claude-hub/WeChatApplets@main/images/%E5%B0%8F%E7%A8%8B%E5%BA%8F.jpeg)
 
 ## 1. commitizen：git cz替代git commit
 

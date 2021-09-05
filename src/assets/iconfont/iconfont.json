@@ -1,0 +1,51 @@
+{
+  "id": "2790740",
+  "name": "微信小程序",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7057206",
+      "name": "left",
+      "font_class": "left",
+      "unicode": "e6e1",
+      "unicode_decimal": 59105
+    },
+    {
+      "icon_id": "2217307",
+      "name": "info",
+      "font_class": "info",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "3324787",
+      "name": "退出登录",
+      "font_class": "logout",
+      "unicode": "e6b8",
+      "unicode_decimal": 59064
+    },
+    {
+      "icon_id": "3511209",
+      "name": "打赏",
+      "font_class": "dashang",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "22784625",
+      "name": "公众号",
+      "font_class": "gzh",
+      "unicode": "e6e8",
+      "unicode_decimal": 59112
+    },
+    {
+      "icon_id": "22913721",
+      "name": "weixin",
+      "font_class": "weixin",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    }
+  ]
+}

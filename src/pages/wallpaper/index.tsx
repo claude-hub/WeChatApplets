@@ -29,6 +29,7 @@ const Wallpaper: React.FC<WallpaperProps> = function() {
 
   return (
     <View>
+      {/* <navbar /> */}
       <Text className="title">热门分类</Text>
       <ScrollView>
         <View className="at-row wrap">

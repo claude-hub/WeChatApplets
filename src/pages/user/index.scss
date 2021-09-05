@@ -1,0 +1,62 @@
+@import "~taro-ui/dist/style/components/avatar.scss";
+@import "~taro-ui/dist/style/components/modal.scss";
+
+$userHeight: 200px;
+
+.user-msg {
+  position: relative;
+
+  .user-header {
+    background: linear-gradient(45deg, #9a84ff, #777eff, #809bff);
+    height: $userHeight;
+  }
+
+  .user-info {
+    position: absolute;
+    top: 0;
+    height: $userHeight;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+  }
+
+  .login {
+    margin-left: 30px;
+    font-size: 32px;
+    color: #ffffff;
+  }
+}
+
+.user-list {
+  padding: 20px;
+
+  .box-ul {
+    padding: 30px;
+  }
+
+  .btn {
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.margin-left-1x {
+  margin-left: 12px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+}

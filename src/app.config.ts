@@ -12,7 +12,9 @@ export default {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
     navigationBarTitleText: '前端进阶手册',
-    navigationBarTextStyle: 'black'
+    navigationBarTextStyle: 'black',
+    // 自定义导航栏
+    // navigationStyle: 'custom',
   },
   tabBar: {
     color: '#8a8a8a',
